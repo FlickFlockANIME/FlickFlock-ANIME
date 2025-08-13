@@ -16,6 +16,41 @@
     html {
       scroll-padding-top: 64px;
     }
+    /* Smooth scaling for large and medium screens */
+  @media (min-width: 1280px) {
+    nav a {
+      font-size: 1rem; /* slightly bigger on wide screens */
+    }
+    section {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Optimize for 1024–1366px laptop screens */
+  @media (max-width: 1366px) {
+    nav a {
+      font-size: 0.9rem;
+    }
+    header .max-w-7xl {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Responsive iframe height */
+  iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  /* Limit hero text scaling */
+  #home h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  #home p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -569,5 +604,6 @@
   </footer>
 </body>
 </html>
+
 
 
